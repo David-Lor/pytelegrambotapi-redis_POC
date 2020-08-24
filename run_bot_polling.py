@@ -1,0 +1,3 @@
+from telegrambot_redis_queues import run_updates_receiver
+
+run_updates_receiver()
