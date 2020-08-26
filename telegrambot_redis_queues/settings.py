@@ -25,6 +25,9 @@ class RedisSettings(BaseSettings):
     url: str = "redis://localhost:6379"
     queue_name: str = "TelegramBotQueue"
 
+    class Config(BaseSettings.Config):
+        env_prefix = "REDIS_"
+
 
 telegram_settings = TelegramSettings()
 redis_settings = RedisSettings()
